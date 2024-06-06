@@ -1,0 +1,61 @@
+<div>
+    <p>{{student.nome}} {{student.cognome}}</p>
+    <p>{{student.nome + ' ' + student.cognome}}</p>
+</div>
+<div>
+    <ul>
+        @for (s of students; track s.id) {
+            <li>{{s.nome + ' ' + s.cognome}}</li>
+        }
+    </ul>
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>nome</th>
+                <th>cognome</th>
+            </tr> 
+        </thead>
+        <tbody>
+            @for (s of students; track s.id) {
+                <tr>
+                    <td>{{s.nome}}</td>
+                    <td>{{s.cognome}}</td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+    <ul>
+        @for (s of noData; track s) {
+            <li>{{s}}</li>
+        }
+        @empty {
+            <li>Non ci sono ancora dati</li>
+        }
+    </ul>
+</div>
+<div>
+    @if (age>35) {
+        <p>Sei un vecchiaccio</p>
+    } @else if(age>30) {
+        <p>Sei bello stagionato</p>
+    } @else {
+        <p>Beato te sei ancora un pupo</p>
+    }
+</div>
+
+<div>
+    @switch (age) {
+        @case (20) {
+            <p>Sei un pupetto</p>
+        }
+        @case (30) {
+            <p>Sarà meglio che ti trovi un lavoro</p>
+        }
+        @default {
+            <p>Non voglio nemmeno sapere quanti anni hai</p>
+        }
+    }
+</div>
