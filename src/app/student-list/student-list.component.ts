@@ -18,8 +18,8 @@ export class StudentListComponent {
 }
 
 interface Student{
-  id: number,
-  nome: string,
-  cognome: string,
-  linguaggioPreferito: string
+  id: number;
+  nome: string;
+  cognome: string;
+  linguaggioPreferito: string;
 }
